@@ -1,1 +1,1 @@
-from .readers import read_int
+from .readers import read_int, read_re
