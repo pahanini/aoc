@@ -23,3 +23,9 @@ def read_groups(filename: str) -> list:
     with open(filename) as file:
         data = file.read().strip()
     return [s.split('\n') for s in data.split('\n\n')]
+
+
+def read(filename: str) -> str:
+    with open(filename) as file:
+        data = file.read().strip()
+    return data
