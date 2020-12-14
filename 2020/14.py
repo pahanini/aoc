@@ -16,7 +16,6 @@ assert mask1('XXXXXXXXXXXXXXXXXXXXXXXXXXXXX1XXXX0X', 11) == 73
 def extend(m):
     r = set()
     p = [i for i, c in enumerate(m) if c == 'X']
-    f = product(["1", "0"], repeat=len(p))
     for x in product(["1", "0"], repeat=len(p)):
         for i, v in zip(p, x):
             m = m[:i] + v + m[i+1:]
