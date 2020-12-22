@@ -61,17 +61,7 @@ print(pzl2(tst2, 'dark violet bag'))
 
 assert pzl2(tst2, 'shiny gold bag') == 126
 
-
 dat = create(parse(read('07.dat')))
 
-
-
-#
-# assert pzl1(tst) == 11
-# assert pzl2(tst) == 6
-#
-#
-# dat = read_groups('06.dat')
-#
 print("day 7 puzzle 1 =", pzl1(dat, 'shiny gold bag'))
 print("day 7 puzzle 2 =", pzl2(dat, 'shiny gold bag'))
