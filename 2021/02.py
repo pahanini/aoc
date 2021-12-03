@@ -34,5 +34,5 @@ assert pzl2(tst) == 900
 
 dat = read_re('02.dat', r"(.+) (.)")
 
-print("day 1 puzzle 1 =", pzl1(dat))
-print("day 1 puzzle 2 =", pzl2(dat))
+print("day 2 puzzle 1 =", pzl1(dat))
+print("day 2 puzzle 2 =", pzl2(dat))
