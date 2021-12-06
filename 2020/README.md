@@ -1,4 +1,4 @@
-#Решения [adventofcode.com 2020](https://adventofcode.com/2020/)
+# Решения [adventofcode.com 2020](https://adventofcode.com/2020/)
 
 
 1. Найти комбинации которые удовлетворяют заданному критерию.
