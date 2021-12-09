@@ -8,24 +8,15 @@ def read(f):
 
 
 def neighbors(m, x, y):
-    max_x = len(m[0]) - 1
-    max_y = len(m) - 1
-    if x > 0:
-        yield x - 1, y
-    if x < max_x:
-        yield x + 1, y
-    if y > 0:
-        yield x, y - 1
-    if y < max_y:
-        yield x, y + 1
+    for nx, ny in ((x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)):
+        if 0 <= nx < len(m[0]) and 0 <= ny < len(m):
+            yield nx, ny
 
 
 def lp(m) -> list:
-    max_x = len(m[0]) - 1
-    max_y = len(m) - 1
     res = []
-    for x in range(0, max_x + 1):
-        for y in range(0, max_y + 1):
+    for x in range(0, len(m[0])):
+        for y in range(0, len(m)):
             if all([m[y][x] < m[ny][nx] for nx, ny in neighbors(m, x, y)]):
                 res.append((x, y))
     return res
