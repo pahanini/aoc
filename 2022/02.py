@@ -1,42 +1,37 @@
 from utils import read_str
 
-score = {
-    'A': 1,  # Rock
-    'B': 2,  # Paper
-    'C': 3,  # Scissors
-    'X': 1,
-    'Y': 2,
-    'Z': 3,
-}
+lft = 'ABC'
+rgt = 'XYZ'
+loose = [1, 2, 0]
 
 
 def pzl1(ss) -> int:
     r = 0
     for s in ss:
-        a = score[s[0]]
-        b = score[s[2]]
-        t = b - a
-        if t == 0:
+        elf = lft.index(s[0])
+        me = rgt.index(s[2])
+        if elf == me:
             r += 3
-        elif t == 1 or t == -2:
+        elif loose[me] != elf:
             r += 6
-        r += b
+        r += me + 1
     return r
 
 
 def pzl2(ss) -> int:
     r = 0
     for s in ss:
-        a = score[s[0]]
-        t = score[s[2]]
-        if t == 2:
-            r += 3 + a
-        elif t == 1:
-            b = a - 1 if a > 1 else 3
-            r += b
+        elf = lft.index(s[0])
+        me = rgt.index(s[2])
+        if me == 1:
+            r += 3
+            me = elf
+        elif me == 2:
+            r += 6
+            me = loose[elf]
         else:
-            b = a + 1 if a != 3 else 1
-            r += 6 + b
+            me = loose.index(elf)
+        r += me + 1
     return r
 
 
