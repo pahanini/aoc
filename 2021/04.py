@@ -68,7 +68,7 @@ def pzl2(nn, bb) -> int:
                         return n * sum(b.unmarked())
 
 
-nd, db = read('04.tst')
+nd, db = read('04.tst1')
 assert pzl1(nd, db) == 4512
 assert pzl2(nd, db) == 1924
 
