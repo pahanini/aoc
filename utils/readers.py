@@ -19,9 +19,11 @@ def read_str(filename: str) -> list:
     return lines
 
 
-def read_groups(filename: str) -> list:
+def read_groups(filename: str, strip: bool = True) -> list:
     with open(filename) as file:
-        data = file.read().strip()
+        data = file.read()
+        if strip:
+            data = data.strip()
     return [s.split('\n') for s in data.split('\n\n')]
 
 
