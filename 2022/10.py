@@ -25,6 +25,7 @@ def pzl2(x):
         if abs(i % 40 - x) <= 1:
             p[r, i - r * 40] = 255
     img = Image.fromarray(p)
+    img.save('10.png')
     img.show()
 
 
