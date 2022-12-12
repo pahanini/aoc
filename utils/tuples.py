@@ -4,3 +4,4 @@ def apply(f, a, b):
 
 def op(t, a, b):
     return tuple(map(t, a, b))
+

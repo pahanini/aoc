@@ -1,4 +1,4 @@
-from utils import read
+from utils import read_all
 
 import re
 
@@ -52,16 +52,16 @@ def pzl2(bags, name):
     return bags[name].cnt()
 
 
-tst1 = create(parse(read('07.1.tst')))
+tst1 = create(parse(read_all('07.1.tst')))
 assert pzl1(tst1, 'shiny gold bag') == 4
 
-tst2 = create(parse(read('07.2.tst')))
+tst2 = create(parse(read_all('07.2.tst')))
 print(pzl2(tst2, 'dark blue bag'))
 print(pzl2(tst2, 'dark violet bag'))
 
 assert pzl2(tst2, 'shiny gold bag') == 126
 
-dat = create(parse(read('07.dat')))
+dat = create(parse(read_all('07.dat')))
 
 print("day 7 puzzle 1 =", pzl1(dat, 'shiny gold bag'))
 print("day 7 puzzle 2 =", pzl2(dat, 'shiny gold bag'))

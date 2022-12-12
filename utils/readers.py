@@ -27,7 +27,7 @@ def read_groups(filename: str, strip: bool = True) -> list:
     return [s.split('\n') for s in data.split('\n\n')]
 
 
-def read(filename: str) -> str:
+def read_all(filename: str) -> str:
     with open(filename) as file:
         data = file.read().strip()
     return data

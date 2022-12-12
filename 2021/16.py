@@ -1,4 +1,4 @@
-from utils import read as read_all
+from utils import read_all as read_all
 import math
 
 
