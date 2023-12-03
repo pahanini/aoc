@@ -14,10 +14,10 @@ def pzl(ss, replace=False) -> int:
     return r
 
 
-tst = read_str('01.tst')
+tst = read_str('01-1.tst')
 assert pzl(tst) == 142
 
-tst = read_str('02.tst')
+tst = read_str('01-2.tst')
 assert pzl(tst, True) == 281
 
 dat = read_str('01.dat')
