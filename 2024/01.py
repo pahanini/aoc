@@ -11,7 +11,7 @@ def pzl2(a):
     return sum(np.multiply(np.arange(100000), np.multiply(c[:, 0], c[:, 1])))
 
 
-t = np.loadtxt('01.tst', dtype=int)
+t = np.loadtxt('0.tst', dtype=int)
 
 assert pzl1(t) == 11
 assert pzl2(t) == 31
