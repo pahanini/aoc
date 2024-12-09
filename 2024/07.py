@@ -46,5 +46,5 @@ assert pzl(t, True) == 11387
 
 d = read('07.dat')
 
-print("day 6 puzzle 1 =", pzl(d))
-print("day 6 puzzle 2 =", pzl(d, True))
+print("day 7 puzzle 1 =", pzl(d))
+print("day 7 puzzle 2 =", pzl(d, True))
