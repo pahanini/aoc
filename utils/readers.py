@@ -1,8 +1,8 @@
 import re
 
 
-def read_complex_board(filename: str, fn) -> dict:
-    return {i + 1j * j: fn(c) for j, s in enumerate(read_str(filename)) for i, c in enumerate(s)}
+def read_complex_board(filename: str, converter=lambda t: t) -> dict:
+    return {i + 1j * j: converter(c) for j, s in enumerate(read_str(filename)) for i, c in enumerate(s)}
 
 
 def read_int(filename: str) -> list:
