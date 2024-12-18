@@ -42,4 +42,4 @@ def pzl(fn, two=False):
 assert pzl('16.tst') == 7036
 
 print("day 16 puzzle 1 =", pzl('16.dat'))
-print("day 15 puzzle 2 =", pzl('16.dat', two=True))
+print("day 16 puzzle 2 =", pzl('16.dat', two=True))
